@@ -1,0 +1,8 @@
+C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\bin\Debug\MozartWaltzGenerator.exe.config
+C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\bin\Debug\MozartWaltzGenerator.exe
+C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\bin\Debug\MozartWaltzGenerator.pdb
+C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\obj\Debug\MozartWaltzGenerator.csproj.AssemblyReference.cache
+C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\obj\Debug\MozartWaltzGenerator.csproj.SuggestedBindingRedirects.cache
+C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\obj\Debug\MozartWaltzGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\obj\Debug\MozartWaltzGenerator.exe
+C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\obj\Debug\MozartWaltzGenerator.pdb
