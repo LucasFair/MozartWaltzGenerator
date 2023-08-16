@@ -20,8 +20,9 @@ namespace MozartWaltzGenerator
         static void PlayAudio()
         {
             var rnd = new Random();
-            int dice_0;  
-            int dice_1; 
+            int dice_0;
+            int dice_1;
+            int repeatTimes = 16;
 
             int[,] menuets = {
                 { 96, 22, 141, 41, 105, 122, 11, 30, 70, 121, 26, 9, 112, 49, 109, 14 },
@@ -50,39 +51,37 @@ namespace MozartWaltzGenerator
             string suffix;
             //string suffix = "M";
             //int audioNum = menuetsDiceResult;
-            for (int i =  0; i < 16; i++)
-            {
 
+            for (int repeatCnt = 0; repeatCnt < repeatTimes; repeatCnt++)  // Runs through the loop three times. 
+            {
                 dice_0 = rnd.Next(1, 6);
                 dice_1 = rnd.Next(1, 6);
                 suffix = "M";
-                chngMinuetTrio = !chngMinuetTrio;
-                //Console.WriteLine(i);
+                int diceResult = menuets[dice_0, dice_1];
+                int audioNum = diceResult;
+
                 if (!chngMinuetTrio)
-
                 {
-
-                    dice_0 = rnd.Next(1, 1);
-                    dice_1 = rnd.Next(1, 2);
+                    int triosDiceResult = trios[dice_0, dice_1];
+                    audioNum = triosDiceResult;
+                    dice_0 = rnd.Next(1, 3);
+                    dice_1 = rnd.Next(1, 3);
                     suffix = "T";
-
+                    //Console.WriteLine(diceResult);
                 }
- 
-                int menuetsDiceResult = menuets[dice_0, dice_1];
-                int audioNum = menuetsDiceResult;
-                //Console.WriteLine(menuetsDiceResult);
+                chngMinuetTrio = !chngMinuetTrio;
+                //Console.WriteLine(diceResult);
                 string filePath = @"C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\AudioBank\" + suffix + audioNum + ".wav";
                 SoundPlayer player = new SoundPlayer(filePath);
-                //Console.WriteLine(filePath);
+                Console.WriteLine(filePath);
                 player.PlaySync();
-
             }
             //string filePath = @"C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\AudioBank\" + suffix + audioNum + ".wav";
             //SoundPlayer player = new SoundPlayer(filePath);
             //Console.WriteLine(filePath);
             //player.PlaySync();
 
-            
+
         }
 
         static void Main(string[] args)
