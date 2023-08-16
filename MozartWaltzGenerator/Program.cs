@@ -59,21 +59,22 @@ namespace MozartWaltzGenerator
                 suffix = "M";
                 int diceResult = menuets[dice_0, dice_1];
                 int audioNum = diceResult;
+                chngMinuetTrio = !chngMinuetTrio;
 
                 if (!chngMinuetTrio)
                 {
                     int triosDiceResult = trios[dice_0, dice_1];
                     audioNum = triosDiceResult;
-                    dice_0 = rnd.Next(1, 3);
-                    dice_1 = rnd.Next(1, 3);
+                    dice_0 = rnd.Next(1, 6);
+                    dice_1 = rnd.Next(1, 6);
                     suffix = "T";
                     //Console.WriteLine(diceResult);
                 }
-                chngMinuetTrio = !chngMinuetTrio;
+          
                 //Console.WriteLine(diceResult);
                 string filePath = @"C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\AudioBank\" + suffix + audioNum + ".wav";
                 SoundPlayer player = new SoundPlayer(filePath);
-                Console.WriteLine(filePath);
+                //Console.WriteLine(filePath);
                 player.PlaySync();
             }
             //string filePath = @"C:\Users\Fair\Documents\Hovedforløb\H1\C#\MozartWaltzGenerator\AudioBank\" + suffix + audioNum + ".wav";
